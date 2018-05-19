@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#ddd, white, white, #ccc);
+  display: flex;
+  align-items: center;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: inherit;
+  height: 300px;
+}

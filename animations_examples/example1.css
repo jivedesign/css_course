@@ -1,0 +1,109 @@
+@keyframes bounze {
+  0% {
+    bottom: 20px;
+  }
+  40% {
+    bottom: 120px;
+  }
+  50% {
+    bottom: 130px;
+  }
+  60% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+@keyframes shadow_grow {
+  0% {
+    width: 150px;
+  }
+  40% {
+    width: 70px;
+  }
+  50% {
+    width: 50px;
+  }
+  60% {
+    width: 70px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+#example1 {
+  color: blue;
+  width: 200px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#shadow {
+  height: 30px;
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  background: radial-gradient(#00000099, #00000000, #00000000);
+}
+
+#example1:hover #shadow {
+  animation-name: shadow_grow;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+/* All decendants get these styles */
+#example1 div:not(#shadow) {
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Only the direct div decendant */
+#example1 > div:first-child {
+  height: 143px;
+  width: 163px;
+  z-index: 1;
+  position: absolute;
+  bottom: 20px;
+
+  height: 160px;
+  width: 160px;
+  background: linear-gradient(red, #af0000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#example1:hover > div:first-child {
+  animation-name: bounze;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+#example1 > div > div {
+  background: linear-gradient(white, #ddd);
+  height: 80%; width: 80%;
+}
+
+#example1 > div > div > div {
+  background: linear-gradient(red, #af0000);
+  height: 75%; width: 75%;
+}
+
+#example1 > div > div > div > div {
+  background: linear-gradient(white, #ddd);
+  height: 70%; width: 70%;
+}
+
+#example1 > div > div > div > div > div {
+  color: blue;
+  font-size: 100px;
+}

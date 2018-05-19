@@ -1,0 +1,91 @@
+#example3 {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes slow_bounze {
+  0% {
+    top: 40%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 40%;
+  }
+}
+
+#chain {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border: 4px solid gold;
+  border-radius: 30px 30px 60px 60px;
+
+}
+
+#bling {
+  position: relative;
+  top: 50%;
+
+  animation-name: slow_bounze;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#outer {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(#c19800, #caaa39, #846100);
+  border: solid 1px #946a0c;
+  border-radius:  75% 15%;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+#outer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: solid 2px #946a0c;
+  border-radius: 50%;
+  left: 8px;
+  top: 7px;
+}
+
+#inner {
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(#00ff00, limegreen, green);
+  border: solid 1px limegreen;
+  border-radius: 75% 15%;
+  position: absolute;
+  top: 11px;
+  left: 12px;
+}
+
+#inner:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width:14px;
+  height: 14px;
+  border: solid 2px #00ff00;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  box-shadow: 0px 0px 20px 16px #00ff00aa;
+}
+
+#hashtag::after {
+  content: "#";
+  color: #946a0c77;
+  position: absolute;
+  transform: rotate(-20deg);
+  font-size: 44px;
+  left: -1px;
+  top: -12px;
+}

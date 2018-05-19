@@ -1,0 +1,95 @@
+#example2 {
+  position: relative;
+  width: 200px;
+}
+
+@keyframes spinnerz {
+  0% {
+    transform: rotate(340deg);
+    top: 90px;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: -40px;
+  }
+  100% {
+    transform: rotate(10deg);
+    top: 90px;
+  }
+}
+
+@keyframes hammer_shadow {
+  0% {
+    width: 150px;
+  }
+  50% {
+    width: 80px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+#hammer_shadow {
+  height: 30px;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background: radial-gradient(#00000099, #00000000, #00000000);
+}
+
+#example2:active #hammer_shadow {
+  animation-name: hammer_shadow;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+
+#example2 > div:not(#hammer_shadow) {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+}
+
+#example2 > div:hover {
+  cursor: -webkit-grab;
+}
+
+#example2 > div:active {
+  animation: spinnerz 1.5s infinite;
+  cursor: -webkit-grabbing;
+}
+
+#example2 > div > div:first-child {
+  height: 30px;
+  width: 10px;
+  border: 6px inset grey;
+  background: linear-gradient(to right, grey, #444444);
+}
+
+#example2 > div > div:nth-child(2) {
+  height: 20px;
+  width: 60px;
+  /* border: solid; */
+  background: repeating-linear-gradient(
+    45deg,
+    #774209,
+    #774209 10px,
+    #65270a 10px,
+    #65270a 20px
+  );
+}
+
+#example2 > div > div:nth-child(3) {
+  height: 70px;
+  width: 35px;
+  border: 8px inset grey;
+  background: linear-gradient(to right, grey, #444444);
+}
