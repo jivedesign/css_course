@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(to bottom right, white, grey) fixed;
+}
+
+#wrapper {
+  padding: 10%;
+}
+
+.example {
+  outline: 2px solid white;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.Static {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Fixed {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Relative {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Absolute {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Sticky {
+  position: static;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

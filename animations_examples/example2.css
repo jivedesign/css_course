@@ -1,6 +1,33 @@
 #example2 {
   position: relative;
-  width: 200px;
+  width: 300px;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
 }
 
 @keyframes spinnerz {
@@ -30,9 +57,23 @@
   }
 }
 
-#hammer_shadow {
-  height: 30px;
-  width: 150px;
+#flash {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  /* background: radial-gradient(#00d0ff99, #ffffff00, #00000000); */
+  background: url('./flash.png');
+  background-size: contain;
+  opacity: 0;
+}
+
+#shadow2 {
+  height: 35px;
+  width: 300px;
   position: absolute;
   left: 0;
   right: 0;
@@ -40,15 +81,7 @@
   margin: 0 auto;
   background: radial-gradient(#00000099, #00000000, #00000000);
 }
-
-#example2:active #hammer_shadow {
-  animation-name: hammer_shadow;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-}
-
-
-#example2 > div:not(#hammer_shadow) {
+#example2 > div:not(#shadow2) {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -67,16 +100,32 @@
   cursor: -webkit-grabbing;
 }
 
+#example2:active #flash {
+  animation-name: flash;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+}
+
+#example2:active #shadow2 {
+  animation-name: hammer_shadow;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+
 #example2 > div > div:first-child {
   height: 30px;
-  width: 10px;
+  width: 15px;
   border: 6px inset grey;
   background: linear-gradient(to right, grey, #444444);
 }
 
 #example2 > div > div:nth-child(2) {
-  height: 20px;
-  width: 60px;
+  height: 22px;
+  width: 90px;
   /* border: solid; */
   background: repeating-linear-gradient(
     45deg,
@@ -88,8 +137,8 @@
 }
 
 #example2 > div > div:nth-child(3) {
-  height: 70px;
-  width: 35px;
+  height: 100px;
+  width: 50px;
   border: 8px inset grey;
   background: linear-gradient(to right, grey, #444444);
 }

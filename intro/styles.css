@@ -4,8 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #00d6ff;
-  /* background: radial-gradient(blue, black); */
-
+  overflow: hidden;
 }
 
 @keyframes title_animation {
