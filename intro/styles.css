@@ -32,9 +32,9 @@ body {
       border-width: 2px;
     }
     to {
-      height: 100vh;
-      width: 100vw;
-      border-width: 500px;
+      height: 150vw;
+      width: 150vw;
+      border-width: 600px;
     }
 }
 
@@ -42,6 +42,8 @@ body {
   position: absolute;
   border-color: #ff005e;
   border-style: solid;
+  transform: rotate(45deg);
+
   animation-name: box_animation;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -49,9 +51,12 @@ body {
 
 .box2 {
   border-color: white;
-  animation-name: box_animation;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+}
+
+.box3 {
+  border-color: #8157d8;
+  animation-duration: 4s;
 }
 
 #title {
