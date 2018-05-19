@@ -1,0 +1,99 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes changing_light {
+  from {
+    perspective-origin: -50%;
+  }
+  to {
+    perspective-origin: 200%;
+  }
+}
+
+@keyframes setting_sun {
+  from {
+    left: -400px;
+    top: -300px;
+  }
+  to {
+    top: -200px;
+    left: 100vw;
+  }
+}
+
+@keyframes darkening_sky {
+  from {
+    left: -600vw;
+  }
+  to {
+    left: 0;
+  }
+}
+
+#bg {
+  position: absolute;
+  top: -40vh;
+  height: 140vh;
+  width: 800vw;
+  background: linear-gradient(white, #c2d3dc);
+  /* background: radial-gradient(#6b0871, #ea2e55, #ffb03a, #ffeb00, #961432, #2f0f33, #120e17); */
+  background: radial-gradient(yellow, #ffeb00, #ffb03a, #c71137, #580352, #27033D);
+
+  animation-name: darkening_sky;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.light {
+  height: 90vh;
+  width: 90vh;
+  position: absolute;
+  background: radial-gradient(white,white, yellow, rgba(255,255,255,0), rgba(255,255,255,0), rgba(255,255,255,0));
+
+  animation-name: setting_sun;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+#wrapper {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  position: relative;
+  display: inline-block;
+  perspective: 15px;
+  perspective-origin: -50%;
+
+  font-size: 80px;
+  text-shadow: 0px -4px 20px #fffb797a;
+  color: #3c2854;
+  font-weight: 400;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: sans-serif;
+
+  animation-name: changing_light;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+#title::after {
+  content: 'Animations';
+  color: black;
+  line-height: 95px;
+
+  text-shadow: 0px 0px 5px black;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: scaleY(-2) rotateX(-15deg);
+  transform-origin: 0% 82%;
+  opacity: .3;
+}

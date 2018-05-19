@@ -1,0 +1,15 @@
+/* Specificity Example */
+
+.equally_specific_style p {
+  color: green;
+}
+
+.equally_specific_style p:first-child.first-p {
+  color: red;
+  font-weight: 100;
+}
+
+.equally_specific_style p:first-child {
+  color: blue;
+  font-weight: bold;
+}
