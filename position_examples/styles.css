@@ -1,53 +1,98 @@
 body {
   background: linear-gradient(to bottom right, white, grey) fixed;
+  background: #383965;
 }
 
 #wrapper {
-  padding: 10%;
+  padding: 10% 20% 20%;
+}
+
+#title {
+  color: #00b4ff;
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
 .example {
-  outline: 2px solid white;
+  border: 7px dotted white;
   height: 400px;
   margin-bottom: 20px;
 }
 
-.Static {
-  position: static;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.example div {
+  border: 8px solid #a6ff00;
+  width: 300px;
+  padding: 20px;
+
+  color: #ff00a1;
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  letter-spacing: -1px;
 }
 
-.Fixed {
+.Static {}
+
+.Static div {
   position: static;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 30px;
+  height: 200px;
 }
 
-.Relative {
-  position: static;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.Fixed {}
+
+.Fixed div {
+  /*position: fixed;*/
+  bottom: 30px;
+  right: 0px;
+
+  height: 150px;
 }
+
+.Relative {}
+
+.Relative div {
+  position: relative;
+  top: 30px;
+  left: -50px;
+
+  height: 200px;
+}
+
+/*.Absolute {
+  position: static;
+}*/
 
 .Absolute {
-  position: static;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
+}
+
+.Absolute div {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+
+  height: 200px;
 }
 
 .Sticky {
-  position: static;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  padding: 10px;
+  font-size: 18px;
+  color: lightslategrey;
+  overflow: auto;
+  font-family: sans-serif;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+}
+
+.Sticky .stuck {
+  position: sticky;
+  top: 10px;
+  background: #00000066;
+
+  height: 70px;
 }

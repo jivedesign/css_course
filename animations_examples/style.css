@@ -20,12 +20,21 @@ body {
   letter-spacing: -1px;
   text-align: center;
   font-size: 30px;
-
   color: inherit;
+  height: 100px;
+
   transition: color 1s, font-size 1s;
+}
+
+#myFunTitle::after {
+  content: "-ive Props";
 }
 
 #myFunTitle:hover {
   color: red;
-  font-size: 50px;
+  font-size: 60px;
+}
+
+#myFunTitle:hover::after {
+  content: "-ing Props";
 }
