@@ -1,0 +1,40 @@
+:root {
+  background: #ff6e7f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  font-size: 25px;
+  padding: 0;
+  margin-top: 100px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* nth-child */
+/*ul:nth-child(1) {
+  color: red;
+}*/
+
+/* nth-of-type */
+/*ul:nth-of-type(1)  {
+  color: red;
+}*/
+
+/* Change color of the third child of the second list */
+/*ul:nth-of-type(2) li:nth-child(3) {
+  color: green;
+}*/
+
+/* Change color of all first ul except third child*/
+/*ul:nth-child(1) li:not(:nth-of-type(3)) {
+  color: red;
+}*/
