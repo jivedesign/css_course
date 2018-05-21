@@ -1,6 +1,6 @@
 @keyframes bounze {
   0% {
-    bottom: 20px;
+    bottom: 15px;
   }
   40% {
     bottom: 120px;
@@ -12,7 +12,7 @@
     bottom: 120px;
   }
   100% {
-    bottom: 20px;
+    bottom: 15px;
   }
 }
 
@@ -43,6 +43,41 @@
   justify-content: center;
 }
 
+/* Only the direct div decendant */
+#example1 > div:first-child {
+  z-index: 1;
+  position: absolute;
+  bottom: 15px;
+
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(red, #af0000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#example1 > div > div {
+  background: linear-gradient(white, #ddd);
+  height: 80%; width: 80%;
+}
+
+#example1 > div > div > div {
+  background: linear-gradient(red, #af0000);
+  height: 75%; width: 75%;
+}
+
+#example1 > div > div > div > div {
+  background: linear-gradient(white, #ddd);
+  height: 70%; width: 70%;
+}
+
+#example1 > div > div > div > div > div {
+  color: blue;
+  font-size: 118px;
+  margin-top: 5px;
+}
+
 #shadow {
   height: 30px;
   width: 200px;
@@ -66,43 +101,8 @@
   align-items: center;
 }
 
-/* Only the direct div decendant */
-#example1 > div:first-child {
-  z-index: 1;
-  position: absolute;
-  bottom: 20px;
-
-  height: 200px;
-  width: 200px;
-  background: linear-gradient(red, #af0000);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #example1:hover > div:first-child {
   animation-name: bounze;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-}
-
-#example1 > div > div {
-  background: linear-gradient(white, #ddd);
-  height: 80%; width: 80%;
-}
-
-#example1 > div > div > div {
-  background: linear-gradient(red, #af0000);
-  height: 75%; width: 75%;
-}
-
-#example1 > div > div > div > div {
-  background: linear-gradient(white, #ddd);
-  height: 70%; width: 70%;
-}
-
-#example1 > div > div > div > div > div {
-  color: blue;
-  font-size: 118px;
-  margin-top: 5px;
 }

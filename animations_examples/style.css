@@ -6,35 +6,10 @@ body {
 }
 
 #wrapper {
+  position: relative;
+  top: 30%;
   display: flex;
   justify-content: space-around;
-  width: inherit;
   height: 300px;
   margin: 0 50px;
-}
-
-#myFunTitle {
-  margin-top: 150px;
-  font-style: italic;
-  font-family: sans-serif;
-  letter-spacing: -1px;
-  text-align: center;
-  font-size: 30px;
-  color: inherit;
-  height: 100px;
-
-  transition: color 1s, font-size 1s;
-}
-
-#myFunTitle::after {
-  content: "-ive Props";
-}
-
-#myFunTitle:hover {
-  color: red;
-  font-size: 60px;
-}
-
-#myFunTitle:hover::after {
-  content: "-ing Props";
 }

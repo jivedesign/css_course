@@ -15,26 +15,21 @@ ul {
   margin-top: 100px;
 }
 
-li {
+li, div {
   margin: 10px 0;
 }
 
-/* nth-child */
-/*ul:nth-child(1) {
-  color: red;
-}*/
+/* Use nth-of-type to change color of only second li */
 
-/* nth-of-type */
-/*ul:nth-of-type(1)  {
-  color: red;
-}*/
+/* Use nth-child to change color of the third child of the second list */
+ul:last-child li:nth-child(3) {color: red}
 
-/* Change color of the third child of the second list */
-/*ul:nth-of-type(2) li:nth-child(3) {
+/*Change color of all divs in first list except the second last*/
+ul:first-child > div:not(:nth-last-of-type(2)) {
+  color: pink;
+}
+
+/*Change color of all elems with attribute "age"*/
+[age="young"] {
   color: green;
-}*/
-
-/* Change color of all first ul except third child*/
-/*ul:nth-child(1) li:not(:nth-of-type(3)) {
-  color: red;
-}*/
+}
