@@ -86,7 +86,7 @@ body {
 }
 
 #title::after {
-  content: 'Animations';
+  content: 'CSS L&L';
   color: black;
   line-height: 95px;
 

@@ -1,6 +1,5 @@
 body {
-  background: linear-gradient(to bottom right, white, grey) fixed;
-  background: #383965;
+  background: #5721b7;
 }
 
 #wrapper {
@@ -55,12 +54,12 @@ body {
 
 .Relative {}
 
-.Relative div {
+.Relative > div:first-child {
   position: relative;
   top: 30px;
   left: -50px;
 
-  height: 200px;
+  height: 100px;
 }
 
 /*.Absolute {
@@ -79,10 +78,19 @@ body {
   height: 200px;
 }
 
+#inner_absolute {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+
+  height: 100px;
+  width: 100px;
+}
+
 .Sticky {
   padding: 10px;
   font-size: 18px;
-  color: lightslategrey;
+  color: #00e3ff;
   overflow: auto;
   font-family: sans-serif;
   line-height: 25px;
@@ -95,4 +103,24 @@ body {
   background: #00000066;
 
   height: 70px;
+}
+
+.Sticky_horz {
+  white-space: nowrap;
+}
+
+.Sticky .stuck_horz {
+  position: sticky;
+  left: 10px;
+  background: #34146d;
+  border-left: 8px solid #a6ff00;
+
+  height: inherit;
+}
+
+th {
+  color: #ff00a1;
+}
+th, td {
+  padding: 10px 20px;
 }

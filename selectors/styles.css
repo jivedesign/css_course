@@ -6,6 +6,7 @@ body {
 div#wrapper {
   width: 50vw;
   margin: 0 auto;
+  text-align: center;
   /* display: flex; */
   /* justify-content: center; */
 }
@@ -22,31 +23,38 @@ div#wrapper {
 
 }
 
-#yo_yo {
+#corn {
   list-style: none;
   padding: 0px;
+  font-family: cursive;
 }
 
 li {
   color: green;
+  font-size: 35px;
+  letter-spacing: -4px;
 }
 
 /* #yo_yo > li {
   color: hotpink;
 } */
 
-#yo_yo li:nth-child(2) {
+#corn li:nth-child(2) {
   color: orange;
+  font-family: sans-serif;
 }
 
 #forgottenMiddleChild {
   color: red;
+  font-family: fantasy;
 }
 
-#importantLastChild {
+#favoriteLastChild {
   color: gold !important;
+  font-family: serif;
 }
 
 li[age="45"] {
   color: grey;
+  font-family: monospace;
 }
