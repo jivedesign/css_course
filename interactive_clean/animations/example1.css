@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*keyframe glow: Alternate bg-color between #00ffd0 and #ff5a8f*/
+
+
+button {
+  height: 65px;
+  width: 195px;
+  padding: 20px 30px;
+  border-radius: 40px;
+  border: 0px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: grey;
+  user-select: none;
+  background-color: #eee;
+
+  box-shadow: 0px 15px 15px #00000066;
+
+  /* APPLY TRANSITION FOR 0.3s for box-shadow and transform */
+
+}
+
+button:focus {outline:0;}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 25px 20px #00000066;
+
+  /* Scale the button to 110% */
+}
+
+button:active {
+  box-shadow: 0px 5px 5px #00000066;
+  color: #00ada8;
+
+  /* Scale the button to 95% */
+
+  /*Apply glow animation for 1s duration, iterating infinitely*/
+
+}
+
+/* On button:actve, change text to say "BUTTON ON" */
+
+/* When not active, change button text to say "BUTTON OFF" */

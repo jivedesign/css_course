@@ -1,0 +1,139 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#ddd, white, #eaeaea, #7d7d7d);
+  overflow: hidden;
+}
+
+#wrapper {
+  position: relative;
+  top: 30%;
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+  margin: 0 50px;
+}
+
+@keyframes bounze {
+  0% {
+    bottom: 25px;
+  }
+  40% {
+    bottom: 120px;
+  }
+  50% {
+    bottom: 130px;
+  }
+  60% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 25px;
+  }
+}
+
+@keyframes shadow_grow {
+  0% {
+    width: 300px;
+    opacity: 1;
+  }
+  40% {
+    width: 70px;
+  }
+  50% {
+    width: 60px;
+    opacity: 0.5;
+  }
+  60% {
+    width: 70px;
+  }
+  100% {
+    width: 300px;
+    opacity: 1;
+  }
+}
+
+#example1 {
+  color: blue;
+  width: 300px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* All decendants get these styles */
+#example1 div {
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#example1 > div:first-child {
+  /*Outer red ring and also the wrapper for the whole shield */
+
+  z-index: 1;
+  position: absolute;
+  bottom: 25px;
+
+  height: 300px;
+  width: 300px;
+  background: linear-gradient(red, darkred);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#example1 > div > div {
+  /*White ring*/
+
+  background: linear-gradient(white, #ddd);
+  height: 80%; width: 80%;
+}
+
+#example1 > div > div > div {
+  /*Second red ring*/
+
+  background: linear-gradient(red, darkred);
+  height: 75%; width: 75%;
+}
+
+#example1 > div > div > div > div {
+  /* White backing for star */
+
+  background: linear-gradient(white, #ddd);
+  height: 70%; width: 70%;
+
+}
+
+#example1 > div > div > div > div > div {
+  /*Star*/
+
+  color: blue;
+  font-size: 180px;
+  margin-top: 5px;
+}
+
+/* Animate the first div and its contents on hover */
+#example1:hover > div:first-child {
+  animation-name: bounze;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+
+#shadow {
+  height: 50px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  background: radial-gradient(#00000099, #00000000, #00000000);
+}
+
+#example1:hover #shadow {
+  animation-name: shadow_grow;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}

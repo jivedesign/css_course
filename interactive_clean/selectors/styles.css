@@ -1,0 +1,28 @@
+:root {
+  background: #ff6e7f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  font-size: 25px;
+  padding: 0;
+  margin-top: 100px;
+}
+
+li, div {
+  margin: 10px 0;
+}
+
+/* Use nth-of-type to change color of only second li */
+
+/* Use nth-child to change color of the third child of the second list */
+
+/*Change color of all divs in first list except the second last*/
+
+/*Change color of all elems with attribute "age"*/
